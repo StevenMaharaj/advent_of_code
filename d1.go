@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"log"
 	"os"
 )
@@ -44,14 +43,14 @@ func d1() int {
 	res := 0
 	for {
 		line, err := b.ReadString('\n')
-		if err != nil  {
+		if err != nil {
 			break
 
 			// append(lines,line)
 		}
 		tens := int(line[first_id(line)]) - 48
 		ones := int(line[last_id(line)]) - 48
-		fmt.Printf("tens: %d, ones: %d\n", tens, ones)
+		// fmt.Printf("tens: %d, ones: %d\n", tens, ones)
 
 		res += int(tens)*10 + int(ones)
 		// break
